@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    Options All -Indexes
+    RewriteEngine on
+    
+    #/app/view/_templates/_404.php
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteRule ^(.*)$ ?k=$1 [L]
+
+</IfModule>
